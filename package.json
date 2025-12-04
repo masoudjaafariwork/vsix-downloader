@@ -1,0 +1,15 @@
+{
+  "name": "vsix-downloader",
+  "version": "1.0.0",
+  "description": "VS Code Extension VSIX Downloader",
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build-css-prod": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.17"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17"
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code Extension VSIX Downloader</title>
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body
+  class="min-h-screen flex items-center justify-center p-5 bg-linear-to-br from-indigo-500 via-purple-500 to-purple-600">
+  <div class="bg-white rounded-2xl shadow-2xl p-10 max-w-2xl w-full">
+    <h1 class="text-gray-800 mb-2.5 text-3xl font-bold">⬇️ VSIX Downloader</h1>
+    <p class="text-gray-600 mb-8 text-sm">Download VS Code extensions from the marketplace</p>
+
+    <div class="mb-5">
+      <label for="marketplaceUrl" class="block text-gray-800 font-semibold mb-2 text-sm">VS Code Marketplace URL</label>
+      <input type="text" id="marketplaceUrl"
+        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-sm transition-colors focus:outline-none focus:border-indigo-500"
+        placeholder="https://marketplace.visualstudio.com/items?itemName=Publisher.ExtensionName" value="">
+    </div>
+
+    <div class="mb-5">
+      <button id="downloadBtn" onclick="downloadVSIX()"
+        class="w-full px-6 flex items-center justify-center py-3 bg-linear-to-r from-indigo-500 to-purple-600 text-white rounded-lg text-sm font-semibold cursor-pointer transition-all hover:shadow-lg hover:-translate-y-0.5 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:opacity-70 disabled:transform-none">
+        ⬇️ Download VSIX File
+      </button>
+    </div>
+
+    <div id="info" class="bg-gray-100 p-3 rounded-lg mb-4 text-xs hidden">
+      <!-- Info content will be inserted here -->
+    </div>
+
+    <div id="resultGroup" class="mt-8 pt-8 border-t-2 border-gray-200 hidden">
+      <div class="text-gray-800 font-semibold mb-2 text-sm">Download Link:</div>
+      <div id="downloadLink"
+        class="bg-gray-100 border-2 border-gray-200 rounded-lg p-3 break-all font-mono text-xs text-gray-800 mb-2.5">
+      </div>
+      <button
+        class="copy-button bg-green-500 px-4 py-2 text-xs w-auto rounded-lg text-white font-semibold hover:bg-green-600 transition-colors"
+        onclick="copyToClipboard()">
+        📋 Copy Link
+      </button>
+    </div>
+
+    <div id="errorMessage" class="bg-red-50 border-2 border-red-500 text-red-700 p-4 rounded-lg mt-2.5 text-sm hidden">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
