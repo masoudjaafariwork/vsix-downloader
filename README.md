@@ -2,6 +2,8 @@
 
 A simple web application to download VS Code extensions from the Visual Studio Marketplace.
 
+🌐 **Live Demo:** [https://masoudjaafariwork.github.io/vsix-downloader/](https://masoudjaafariwork.github.io/vsix-downloader/)
+
 ## Features
 
 - Download VS Code extensions as VSIX files directly from the marketplace
@@ -76,7 +78,7 @@ This project includes an automated GitHub Actions workflow that deploys the app 
 
 3. **Access your site:**
    - After deployment, your site will be available at:
-     `https://<your-username>.github.io/<repository-name>/`
+     [https://masoudjaafariwork.github.io/vsix-downloader/](https://masoudjaafariwork.github.io/vsix-downloader/)
    - The deployment typically takes 1-2 minutes to complete
 
 ### Manual Deployment
