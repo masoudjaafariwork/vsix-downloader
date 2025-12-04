@@ -58,10 +58,45 @@ To watch for changes during development:
 npm run tailwind
 ```
 
+## Deployment to GitHub Pages
+
+This project includes an automated GitHub Actions workflow that deploys the app to GitHub Pages whenever you push to the `main` branch.
+
+### Initial Setup
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository on GitHub
+   - Navigate to **Settings** → **Pages**
+   - Under "Source", select **GitHub Actions**
+   - Save the settings
+
+2. **Push your code:**
+   - The workflow will automatically run when you push to the `main` branch
+   - You can also manually trigger it from the **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**
+
+3. **Access your site:**
+   - After deployment, your site will be available at:
+     `https://<your-username>.github.io/<repository-name>/`
+   - The deployment typically takes 1-2 minutes to complete
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
+1. Build the CSS for production:
+```bash
+npm run build-css-prod
+```
+
+2. Copy files to a `docs/` folder or configure GitHub Pages to serve from the `src/` directory
+
 ## Project Structure
 
 ```text
 VSIX Downloader/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # GitHub Actions workflow for deployment
 ├── src/
 │   ├── input.css          # Tailwind CSS source file
 │   ├── output.css         # Compiled CSS output
